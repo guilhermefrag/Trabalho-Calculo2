@@ -8,7 +8,6 @@ __pycache__/
 
 secret_key.txt
 /tests
-/config/settings.py
 # Distribution / packaging
 .Python
 build/
