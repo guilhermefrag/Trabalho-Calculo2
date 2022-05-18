@@ -48,7 +48,7 @@ class IntegralViewSet(ModelViewSet):
 
             print(f'R$ {round(valor,3)}')
             
-            sql = f"""INSERT INTO integral(f_x, g_x, a, b, area, valor) VALUES ('{f_x}', '{g_x}','{total[0]}', '{total[1]}' ,{resultado}, 3.0/{valor});"""
+            sql = f"""INSERT INTO integral(f_x, g_x, a, b, area, valor) VALUES ('{f_x}', '{g_x}','{total[0]}', '{total[1]}' ,{resultado}, {valor});"""
                         
             with connections['default'].cursor() as cursor:
                 cursor.execute(sql)            
