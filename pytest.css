@@ -1,3 +1,7 @@
-.description{
-    background-color:red;
+#title {
+    font-size: 25px
+}
+
+#description{
+    text-align: center;
 }
