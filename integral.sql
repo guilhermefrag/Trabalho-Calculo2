@@ -51,8 +51,8 @@ CREATE TABLE calculos.integral (
     id integer NOT NULL,
     f_x character varying(20) NOT NULL,
     g_x character varying(20) NOT NULL,
-    a character varying(20) NOT NULL,
-    b character varying(20) NOT NULL,
+    a character varying(20),
+    b character varying(20),
     area real,
     valor real
 );
@@ -497,6 +497,7 @@ ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('p
 
 COPY calculos.integral (id, f_x, g_x, a, b, area, valor) FROM stdin;
 1	4*x	x**2	0	4	10.666626	42.667
+5	2*x	x**6	0	2**(1/5)	0.9423828	3.7695312
 \.
 
 
@@ -653,7 +654,7 @@ COPY public.spatial_ref_sys (srid, auth_name, auth_srid, srtext, proj4text) FROM
 -- Name: integral_id_seq; Type: SEQUENCE SET; Schema: calculos; Owner: postgres
 --
 
-SELECT pg_catalog.setval('calculos.integral_id_seq', 3, true);
+SELECT pg_catalog.setval('calculos.integral_id_seq', 5, true);
 
 
 --
